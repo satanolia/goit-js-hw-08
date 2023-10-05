@@ -28,6 +28,9 @@ function savedMessage() {
 
 function onSubmit(evt) {
   evt.preventDefault();
+  if (!input.value || !textarea.value) {
+    return;
+    }
   const feedback = {
     email: input.value,
     message: textarea.value,
